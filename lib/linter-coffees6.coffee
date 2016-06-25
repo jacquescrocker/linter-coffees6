@@ -1,12 +1,15 @@
 coffee = require 'coffee-script'
+processString = require './es6-filters'
 
-class LinterCoffeeScript
+class LinterCoffeES6
   grammarScopes: ['source.coffee', 'source.litcoffee', 'source.coffee.jsx']
   scope: 'file'
   lintOnFly: true
   lint: (textEditor) ->
     filePath = textEditor.getPath()
     source = textEditor.getText()
+
+    source = processString(source)
 
     try
       coffee.compile source
@@ -28,4 +31,4 @@ class LinterCoffeeScript
 
     return [[lineStart, colStart], [lineEnd, colEnd]]
 
-module.exports = LinterCoffeeScript
+module.exports = LinterCoffeES6
