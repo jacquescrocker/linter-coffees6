@@ -1,7 +1,7 @@
 {
   "name": "linter-coffees6",
   "main": "./lib/init",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Lint CoffeeScript on the fly, using coffee (with ES6 import/export syntax)",
   "repository": "https://github.com/jacquescrocker/linter-coffees6",
   "license": "MIT",
